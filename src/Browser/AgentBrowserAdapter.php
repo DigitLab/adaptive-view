@@ -11,7 +11,7 @@ class AgentBrowserAdapter implements Browser
      */
     private $agent;
 
-    function __construct(Agent $agent)
+    public function __construct(Agent $agent)
     {
         $this->agent = $agent;
     }
@@ -21,7 +21,7 @@ class AgentBrowserAdapter implements Browser
      *
      * @return bool
      */
-    function isMobile()
+    public function isMobile()
     {
         return $this->agent->isMobile();
     }
@@ -31,7 +31,7 @@ class AgentBrowserAdapter implements Browser
      *
      * @return bool
      */
-    function isTablet()
+    public function isTablet()
     {
         return $this->agent->isTablet();
     }

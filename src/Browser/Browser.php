@@ -9,12 +9,12 @@ interface Browser
      *
      * @return bool
      */
-    function isMobile();
+    public function isMobile();
 
     /**
      * Determines if the browser is a tablet browser.
      *
      * @return bool
      */
-    function isTablet();
+    public function isTablet();
 }
