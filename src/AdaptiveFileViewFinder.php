@@ -30,11 +30,11 @@ class AdaptiveFileViewFinder extends FileViewFinder
     /**
      * Create a new file view loader instance.
      *
-     * @param  \DigitLab\AdaptiveView\Browser\Browser $browser
-     * @param  \Illuminate\Filesystem\Filesystem $files
-     * @param  array $paths
-     * @param  array $extensions
-     * @param  array $mobileExtensions
+     * @param \DigitLab\AdaptiveView\Browser\Browser $browser
+     * @param \Illuminate\Filesystem\Filesystem      $files
+     * @param array                                  $paths
+     * @param array                                  $extensions
+     * @param array                                  $mobileExtensions
      */
     public function __construct(Browser $browser, Filesystem $files, array $paths, array $extensions = null, array $mobileExtensions = null)
     {
@@ -50,7 +50,8 @@ class AdaptiveFileViewFinder extends FileViewFinder
     /**
      * Get an array of possible view files.
      *
-     * @param  string  $name
+     * @param string $name
+     *
      * @return array
      */
     protected function getPossibleViewFiles($name)
@@ -59,7 +60,7 @@ class AdaptiveFileViewFinder extends FileViewFinder
 
         if ($this->browser->isMobile()) {
             $extensions = array_merge($this->mobileExtensions, $extensions);
-        } else if ($this->browser->isTablet()) {
+        } elseif ($this->browser->isTablet()) {
             $extensions = array_merge($this->tabletExtensions, $extensions);
         }
 
@@ -82,7 +83,8 @@ class AdaptiveFileViewFinder extends FileViewFinder
     /**
      * Register a mobile extension with the view finder.
      *
-     * @param  string  $extension
+     * @param string $extension
+     *
      * @return void
      */
     public function addMobileExtension($extension)
@@ -97,7 +99,8 @@ class AdaptiveFileViewFinder extends FileViewFinder
     /**
      * Register a tablet extension with the view finder.
      *
-     * @param  string  $extension
+     * @param string $extension
+     *
      * @return void
      */
     public function addTabletExtension($extension)
