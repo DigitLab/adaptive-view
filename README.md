@@ -1,6 +1,6 @@
 # Adaptive View
 
-[![Latest Stable Version](http://img.shields.io/packagist/v/digitlab/adaptive-view.svg)](https://packagist.org/packages/digitlab/adaptive-view) [![Total Downloads](http://img.shields.io/packagist/dm/digitlab/adaptive-view.svg)](https://packagist.org/packages/digitlab/adaptive-view) [![Build Status](http://img.shields.io/travis/DigitLab/adaptive-view.svg)](https://travis-ci.org/DigitLab/adaptive-view)
+[![Latest Stable Version](http://img.shields.io/packagist/v/DigitLab/adaptive-view.svg)](https://packagist.org/packages/digitlab/adaptive-view) [![Total Downloads](http://img.shields.io/packagist/dm/DigitLab/adaptive-view.svg)](https://packagist.org/packages/digitlab/adaptive-view) [![Build Status](http://img.shields.io/travis/DigitLab/adaptive-view.svg)](https://travis-ci.org/DigitLab/adaptive-view)
 
 An adaptive view extension for Laravel.
 
