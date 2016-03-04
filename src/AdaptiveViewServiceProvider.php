@@ -4,15 +4,15 @@ namespace DigitLab\AdaptiveView;
 
 use DigitLab\AdaptiveView\Browser\AgentBrowserAdapter;
 use DigitLab\AdaptiveView\Browser\Browser;
-use Illuminate\View\ViewServiceProvider;
+use Illuminate\Support\ServiceProvider;
 
-class AdaptiveViewServiceProvider extends ViewServiceProvider
+class AdaptiveViewServiceProvider extends ServiceProvider
 {
     public function register()
     {
         $this->registerBrowser();
 
-        parent::register();
+        $this->registerViewFinder();
     }
 
     public function registerBrowser()

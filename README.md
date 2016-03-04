@@ -10,16 +10,17 @@ An adaptive view extension for Laravel.
 
 ## Installation
 
+Install using composer:
+
 ```bash
 composer require digitlab/adaptive-view
 ```
 
 Follow the instructions in setting up [Agent](https://github.com/jenssegers/agent).
 
-Replace the Laravel view service provider in `app/config/app.php`:
+Add the service provider in app/config/app.php:
 
 ```php
-// Illuminate\View\ViewServiceProvider::class,
 DigitLab\AdaptiveView\AdaptiveViewServiceProvider::class,
 ```
 
