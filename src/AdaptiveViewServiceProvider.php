@@ -8,6 +8,11 @@ use Illuminate\Support\ServiceProvider;
 
 class AdaptiveViewServiceProvider extends ServiceProvider
 {
+    /**
+     * Register the service provider.
+     *
+     * @return void
+     */
     public function register()
     {
         $this->registerBrowser();
@@ -15,6 +20,11 @@ class AdaptiveViewServiceProvider extends ServiceProvider
         $this->registerViewFinder();
     }
 
+    /**
+     * Register the browser implementation.
+     *
+     * @return void
+     */
     public function registerBrowser()
     {
         $browser = $this->app['config']['view.browser'];
@@ -25,6 +35,11 @@ class AdaptiveViewServiceProvider extends ServiceProvider
         $this->app->bind(Browser::class, $browser);
     }
 
+    /**
+     * Register the view finder implementation.
+     *
+     * @return void
+     */
     public function registerViewFinder()
     {
         $this->app->bind('view.finder', function ($app) {
