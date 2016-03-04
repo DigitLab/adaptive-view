@@ -58,7 +58,7 @@ class AdaptiveFileViewFinder extends FileViewFinder
     {
         $extensions = $this->extensions;
 
-        if ($this->browser->isMobile()) {
+        if ($this->browser->isMobile() && !$this->browser->isTablet()) {
             $extensions = array_merge($this->mobileExtensions, $extensions);
         } elseif ($this->browser->isTablet()) {
             $extensions = array_merge($this->tabletExtensions, $extensions);
