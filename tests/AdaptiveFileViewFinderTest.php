@@ -22,6 +22,7 @@ class AdaptiveFileViewFinderTest extends PHPUnit_Framework_TestCase
     {
         $finder = $this->getFinder();
         $finder->getBrowser()->shouldReceive('isMobile')->once()->andReturn(true);
+        $finder->getBrowser()->shouldReceive('isTablet')->once()->andReturn(false);
         $finder->getFilesystem()->shouldReceive('exists')->once()->with(__DIR__.'/foo.mobile.blade.php')->andReturn(true);
         $this->assertEquals(__DIR__.'/foo.mobile.blade.php', $finder->find('foo'));
     }
