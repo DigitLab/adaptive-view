@@ -29,6 +29,11 @@ DigitLab\AdaptiveView\AdaptiveViewServiceProvider::class,
 You can create a mobile view with the ```.mobile.blade.php``` extension. Similarly you can create tablet views with
 the ```.tablet.blade.php``` extension. Mobile and tablet views will fallback to normal views if they do not exist.
 
+## Troubleshooting
+
+* Check that AdaptiveViewServiceProvider is registered as soon after the ViewServiceProvider as possible. Invoking the 
+  view factory before registering AdaptiveViewServiceProvider will cause it not to work.
+
 ## License
 
 Adaptive View is licensed under [The MIT License (MIT)](LICENSE).
